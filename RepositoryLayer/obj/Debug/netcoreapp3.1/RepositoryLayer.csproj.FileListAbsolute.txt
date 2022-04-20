@@ -1,0 +1,16 @@
+D:\git\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.csproj.AssemblyReference.cache
+D:\git\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.AssemblyInfoInputs.cache
+D:\git\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.AssemblyInfo.cs
+D:\git\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.csproj.CoreCompileInputs.cache
+D:\git\RepositoryLayer\bin\Debug\netcoreapp3.1\RepositoryLayer.deps.json
+D:\git\RepositoryLayer\bin\Debug\netcoreapp3.1\RepositoryLayer.runtimeconfig.json
+D:\git\RepositoryLayer\bin\Debug\netcoreapp3.1\RepositoryLayer.runtimeconfig.dev.json
+D:\git\RepositoryLayer\bin\Debug\netcoreapp3.1\RepositoryLayer.dll
+D:\git\RepositoryLayer\bin\Debug\netcoreapp3.1\RepositoryLayer.pdb
+D:\git\RepositoryLayer\bin\Debug\netcoreapp3.1\DataBaseLayer.dll
+D:\git\RepositoryLayer\bin\Debug\netcoreapp3.1\DataBaseLayer.pdb
+D:\git\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.csproj.CopyComplete
+D:\git\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.dll
+D:\git\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.pdb
+D:\git\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.genruntimeconfig.cache

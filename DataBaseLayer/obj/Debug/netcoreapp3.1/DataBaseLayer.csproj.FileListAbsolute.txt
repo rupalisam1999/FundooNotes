@@ -1,0 +1,10 @@
+D:\git\DataBaseLayer\bin\Debug\netcoreapp3.1\DataBaseLayer.deps.json
+D:\git\DataBaseLayer\bin\Debug\netcoreapp3.1\DataBaseLayer.dll
+D:\git\DataBaseLayer\bin\Debug\netcoreapp3.1\DataBaseLayer.pdb
+D:\git\DataBaseLayer\obj\Debug\netcoreapp3.1\DataBaseLayer.csproj.AssemblyReference.cache
+D:\git\DataBaseLayer\obj\Debug\netcoreapp3.1\DataBaseLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\DataBaseLayer\obj\Debug\netcoreapp3.1\DataBaseLayer.AssemblyInfoInputs.cache
+D:\git\DataBaseLayer\obj\Debug\netcoreapp3.1\DataBaseLayer.AssemblyInfo.cs
+D:\git\DataBaseLayer\obj\Debug\netcoreapp3.1\DataBaseLayer.csproj.CoreCompileInputs.cache
+D:\git\DataBaseLayer\obj\Debug\netcoreapp3.1\DataBaseLayer.dll
+D:\git\DataBaseLayer\obj\Debug\netcoreapp3.1\DataBaseLayer.pdb
