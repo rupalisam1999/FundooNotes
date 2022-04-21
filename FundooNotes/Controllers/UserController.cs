@@ -10,8 +10,9 @@ using System.Threading.Tasks;
 
 namespace FundooNotes.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("[controller]")]
+   
     public class UserController : ControllerBase
     {
         IUserBL userBL;
@@ -33,6 +34,26 @@ namespace FundooNotes.Controllers
                 }
                 this.userBL.AddUser(user);
                 return this.Ok(new { success = true, message = $"Registration Successfull { user.Email}" });
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        [HttpPost("Login")]
+        public ActionResult LoginUser(string Email, string Password)
+        {
+            try
+            {
+                var getUserData = fundoo.Users.FirstOrDefault(u => u.Email == Email);
+                if (getUserData != null)
+                {
+                    return this.Ok(new { success = false, message = $"{Email} LoginFailed" });
+                }
+                this.userBL.LoginUser(Email,Password);
+                return this.Ok(new { success = true, message = $"Login Successfull { Email}" });
 
             }
             catch (Exception ex)
