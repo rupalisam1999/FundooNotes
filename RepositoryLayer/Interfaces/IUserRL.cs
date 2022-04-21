@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RepositoryLayer.UserInterface
 {
-    interface IUserRL
+    public interface IUserRL
     {
         public void AddUser(UserPostModel user);
     }

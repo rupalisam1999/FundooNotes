@@ -1,3 +1,5 @@
+using BusinessLayer.Interfases;
+using BusinessLayer.Servises;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RepositoryLayer.FundooNotesContext;
+using RepositoryLayer.UserClass;
+using RepositoryLayer.UserInterface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +32,9 @@ namespace FundooNotes
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddTransient<IUserBL, UserBL>();
+            services.AddTransient<IUserRL, UserRL>();
+
             services.AddDbContext<FundooContext>(opts => opts.UseSqlServer(Configuration["ConnectionStrings:FundooNotes"]));
         }
 
