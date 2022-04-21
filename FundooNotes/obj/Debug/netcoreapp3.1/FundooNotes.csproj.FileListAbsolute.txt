@@ -68,3 +68,8 @@ D:\git\FundooNotes\bin\Debug\netcoreapp3.1\RepositoryLayer.pdb
 D:\git\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.csproj.CopyComplete
 D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Humanizer.dll
 D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\git\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.MvcApplicationPartsAssemblyInfo.cs
+D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
