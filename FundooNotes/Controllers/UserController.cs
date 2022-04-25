@@ -101,5 +101,21 @@ namespace FundooNotes.Controllers
                 return BadRequest(new { success = false, e.Message });
             }
         }
+
+
+        [HttpGet("getallusers")]
+        public ActionResult GetAllUsers()
+        {
+            try
+            {
+                var result = this.userBL.GetAllUsers();
+                return this.Ok(new { success = true, message = $"Below are the User data", data = result });
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+        }
     }
 }

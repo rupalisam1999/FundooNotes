@@ -1,4 +1,5 @@
 ﻿using DataBaseLayer;
+using RepositoryLayer.Entity;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,6 +14,9 @@ namespace RepositoryLayer.UserInterface
         public bool ForgetPassword(string Email);
 
         public void ResetPassword(string Email, string Password, string cPassword);
+
+        List<User> GetAllUsers();
+
 
 
 

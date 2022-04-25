@@ -27,5 +27,7 @@ namespace DataBaseLayer
         //[RegularExpression("^[A-Z]{1}[a-z]{4,}[@]{1}[1-9]{4}$, ErrorMessage = password must contain minimun 8 charactor and having minimum 1 special charactor")]
         public string Password { get; set; }
 
+        
+
     }
 }
