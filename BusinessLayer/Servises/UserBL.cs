@@ -68,17 +68,17 @@ namespace BusinessLayer.Servises
             }
         }
 
-        //public List<User> GetAllUsers()
-        //{
-        //    try
-        //    {
-        //        return userRL.GetAllUsers();
+        public List<User> GetAllUsers()
+        {
+            try
+            {
+                return userRL.GetAllUsers();
 
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        throw e;
-        //    }
-        //}
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

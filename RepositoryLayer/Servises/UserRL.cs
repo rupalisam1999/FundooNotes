@@ -149,7 +149,7 @@ namespace RepositoryLayer.UserClass
             }
         }
 
-        private void msmqQueue_ReceiveCompleted(object sender, ReceiveCompletedEventArgs e)
+        private void MsmqQueue_ReceiveCompleted(object sender, ReceiveCompletedEventArgs e)
         {
             try
             {
@@ -215,6 +215,41 @@ namespace RepositoryLayer.UserClass
             }
 
 
+        }
+
+        public List<User> GetAllUsers()
+        {
+            try
+            {
+                var result = fundoo.Users.ToList();
+                return result;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        private void msmqQueue_ReceiveCompleted(object sender, ReceiveCompletedEventArgs e)
+        {
+            try
+            {
+                MessageQueue queue = (MessageQueue)sender;
+                Message msg = queue.EndReceive(e.AsyncResult);
+                // EmailService.SendEmail(e.Message.ToString(), GenerateToken(e.Message.ToString()));
+                queue.BeginReceive();
+            }
+            catch (MessageQueueException ex)
+            {
+                if (ex.MessageQueueErrorCode ==
+
+                    MessageQueueErrorCode.AccessDenied)
+                {
+                    Console.WriteLine("Access is denied. " +
+                        "Queue might be a system queue.");
+                }
+                // Handle other sources of MessageQueueException.
+            }
         }
 
 

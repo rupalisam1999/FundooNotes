@@ -23,6 +23,10 @@ namespace RepositoryLayer.Entity
 
         public string Password { get; set; }
 
-        public DateTime registerdDate { get; set; }
+        public DateTime registerdDate { get; set; } 
+
+        
+       
+
     }
 }
