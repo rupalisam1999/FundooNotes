@@ -8,6 +8,8 @@ namespace RepositoryLayer.Entity
 {
    public class User
     {
+        internal string cPassword;
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }

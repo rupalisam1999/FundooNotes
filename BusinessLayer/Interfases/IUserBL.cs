@@ -9,5 +9,7 @@ namespace BusinessLayer.Interfases
     {
         public void AddUser(UserPostModel user);
         public string LoginUser(string Email, string Password);
+       public bool ForgotPassword(string Email);
+       public void ResetPassword(string Email, string Password, string cPassword);
     }
 }

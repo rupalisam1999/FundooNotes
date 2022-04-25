@@ -7,6 +7,8 @@ namespace RepositoryLayer.FundooNotesContext
 {
     public class FundooContext : DbContext
     {
+        public string Email;
+
         public FundooContext(DbContextOptions options)
            : base(options)
         {
