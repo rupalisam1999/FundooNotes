@@ -73,3 +73,5 @@ D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Experimental.System.Messaging.dll

@@ -9,5 +9,12 @@ namespace RepositoryLayer.UserInterface
     {
         public void AddUser(UserPostModel user);
         public string LoginUser(string Email, string Password);
+
+        public bool ForgetPassword(string Email);
+
+        public void ResetPassword(string Email, string Password, string cPassword);
+
+
+
     }
 }
