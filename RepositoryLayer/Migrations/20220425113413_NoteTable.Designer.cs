@@ -3,44 +3,23 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RepositoryLayer.FundooNotesContext;
 
 namespace RepositoryLayer.Migrations
 {
     [DbContext(typeof(FundooContext))]
-    partial class FundooContextModelSnapshot : ModelSnapshot
+    [Migration("20220425113413_NoteTable")]
+    partial class NoteTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("RepositoryLayer.Entity.Lable", b =>
-                {
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("NoteId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LableId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("LableName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("UserId", "NoteId");
-
-                    b.HasIndex("NoteId");
-
-                    b.ToTable("Lables");
-                });
 
             modelBuilder.Entity("RepositoryLayer.Entity.Note", b =>
                 {
@@ -114,25 +93,6 @@ namespace RepositoryLayer.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("RepositoryLayer.Entity.Lable", b =>
-                {
-                    b.HasOne("RepositoryLayer.Entity.Note", "Note")
-                        .WithMany("lables")
-                        .HasForeignKey("NoteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("RepositoryLayer.Entity.User", "User")
-                        .WithMany("lables")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Note");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("RepositoryLayer.Entity.Note", b =>
                 {
                     b.HasOne("RepositoryLayer.Entity.User", "User")
@@ -142,16 +102,6 @@ namespace RepositoryLayer.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("RepositoryLayer.Entity.Note", b =>
-                {
-                    b.Navigation("lables");
-                });
-
-            modelBuilder.Entity("RepositoryLayer.Entity.User", b =>
-                {
-                    b.Navigation("lables");
                 });
 #pragma warning restore 612, 618
         }
