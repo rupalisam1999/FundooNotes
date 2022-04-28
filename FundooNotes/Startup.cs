@@ -10,6 +10,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using RepositoryLayer.FundooNotesContext;
+using RepositoryLayer.Interfaces;
+using RepositoryLayer.Servises;
 using RepositoryLayer.UserClass;
 using RepositoryLayer.UserInterface;
 using System.Text;
@@ -31,7 +33,8 @@ namespace FundooNotes
             services.AddControllers();
             services.AddTransient<IUserBL, UserBL>();
             services.AddTransient<IUserRL, UserRL>();
-            services.AddTransient<IUserBL, UserBL>();
+            services.AddTransient<INoteBL, NoteBL>();
+            services.AddTransient<INoteRL, NoteRL>();
             #region Swagger Configuration
             services.AddSwaggerGen(swagger =>
             {
