@@ -19,8 +19,8 @@ namespace BusinessLayer.Servises
         }
         public async Task AddNote(NotePostModel notePostModel, int userId)
         {
-            try
-            {
+            
+            
                 try
                 {
                     await this.noteRL.AddNote(notePostModel, userId);
@@ -29,12 +29,8 @@ namespace BusinessLayer.Servises
                 {
                     throw ex;
                 }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            
+           
         }
 
 

@@ -18,11 +18,12 @@ namespace RepositoryLayer.Entity
         public bool IsPin { get; set; }
         public bool IsReminder { get; set; }
         public bool IsTrash { get; set; }
-
+        public DateTime registerdDate { get; set; }
+        public DateTime ModifiedDate { get; set; }
         public int UserId { get; set; }
 
         public virtual User User { get; set; }
-        public IList<Lable> lables { get; set; }
+        public ICollection<Lable> lables { get; set; }
 
 
 
