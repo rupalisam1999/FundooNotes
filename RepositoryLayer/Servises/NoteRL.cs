@@ -38,6 +38,8 @@ namespace RepositoryLayer.Servises
                 note.Title = notePostModel.Title;
                 note.Description = notePostModel.Description;
                 note.BGColor = notePostModel.BGColor;
+                note.registerdDate = DateTime.Now;
+                note.ModifiedDate = DateTime.Now;
                 fundoo.Add(note);
                 await fundoo.SaveChangesAsync();
 
@@ -71,24 +73,7 @@ namespace RepositoryLayer.Servises
             }
         }
 
-        //public bool UpdateNotes(int NoteId, NotePostModel notePost)
-        //{
-        //    Note notes = fundoo.Notes.Where(e => e.NoteId == NoteId).FirstOrDefault();
-        //    notes.Title = notePost.Title;
-        //    notes.Description = notePost.Description;
-
-        //    fundoo.Notes.Update(notes);
-        //    var result = fundoo.SaveChangesAsync();
-        //    if (result != null)
-        //        return true;
-        //    else
-        //        return false;
-
-        //}
-
-
-
-
+      
         public async Task<Note> UpdateNote(NotePostModel notePostModel, int noteId, int userId)
         {
             try

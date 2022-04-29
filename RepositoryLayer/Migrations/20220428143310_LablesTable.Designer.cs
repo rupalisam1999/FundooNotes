@@ -10,8 +10,8 @@ using RepositoryLayer.FundooNotesContext;
 namespace RepositoryLayer.Migrations
 {
     [DbContext(typeof(FundooContext))]
-    [Migration("20220428092952_LableTable")]
-    partial class LableTable
+    [Migration("20220428143310_LablesTable")]
+    partial class LablesTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,12 +23,6 @@ namespace RepositoryLayer.Migrations
 
             modelBuilder.Entity("RepositoryLayer.Entity.Lable", b =>
                 {
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("NoteId")
-                        .HasColumnType("int");
-
                     b.Property<int>("LableId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
@@ -37,9 +31,17 @@ namespace RepositoryLayer.Migrations
                     b.Property<string>("LableName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("UserId", "NoteId");
+                    b.Property<int?>("NoteId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("LableId");
 
                     b.HasIndex("NoteId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Lables");
                 });
@@ -69,11 +71,17 @@ namespace RepositoryLayer.Migrations
                     b.Property<bool>("IsTrash")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("registerdDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("NoteId");
 
@@ -120,15 +128,11 @@ namespace RepositoryLayer.Migrations
                 {
                     b.HasOne("RepositoryLayer.Entity.Note", "Note")
                         .WithMany("lables")
-                        .HasForeignKey("NoteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("NoteId");
 
                     b.HasOne("RepositoryLayer.Entity.User", "User")
                         .WithMany("lables")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Note");
 

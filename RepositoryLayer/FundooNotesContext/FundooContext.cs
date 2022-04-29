@@ -24,21 +24,7 @@ namespace RepositoryLayer.FundooNotesContext
             .HasIndex(u => u.Email)
             .IsUnique();
 
-            modelBuilder.Entity<Entity.Lable>()
-               .HasKey(un => new { un.UserId, un.NoteId });
-
-            modelBuilder.Entity<Entity.Lable>()
-                .HasOne<Entity.User>(u => u.User)
-                 .WithMany(s => s.lables)
-                 .HasForeignKey(u => u.UserId)
-                 .OnDelete(DeleteBehavior.Cascade); //Cascade behaviour
-
-
-            modelBuilder.Entity<Entity.Lable>()
-               .HasOne<Entity.Note>(u => u.Note)
-                .WithMany(s => s.lables)
-                .HasForeignKey(u => u.NoteId)
-                .OnDelete(DeleteBehavior.Cascade); //Cascade behaviour
+            
         }
     }
 }

@@ -25,7 +25,7 @@ namespace RepositoryLayer.Entity
 
         public DateTime registerdDate { get; set; } 
 
-        public IList<Lable> lables { get; set; }
+        public ICollection<Lable> lables { get; set; }
 
         
 
