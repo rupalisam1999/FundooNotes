@@ -62,9 +62,6 @@ namespace BusinessLayer.Servises
             }
         }
 
-
-    
-
         public async Task<List<Lable>> GetLableByNoteId(int noteId)
         {
             try
