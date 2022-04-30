@@ -50,7 +50,7 @@ namespace RepositoryLayer.Servises
         {
             try
             {
-                List<Lable> reuslt = await fundoo.Lables.Where(u => u.UserId == userId).ToListAsync();
+                List<Lable> reuslt = await fundoo.Lables.Where(u => u.UserId == userId).Include(u => u.User).Include(u => u.Note).ToListAsync();
                 return reuslt;
             }
             catch (Exception ex)
@@ -64,7 +64,7 @@ namespace RepositoryLayer.Servises
 
             try
             {
-                List<Lable> reuslt = await fundoo.Lables.Where(u => u.NoteId == noteId).ToListAsync();
+                List<Lable> reuslt = await fundoo.Lables.Where(u => u.NoteId == noteId).Include(u => u.User).Include(u => u.Note).ToListAsync();
                 return reuslt;
             }
             catch (Exception ex)

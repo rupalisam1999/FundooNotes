@@ -15,6 +15,7 @@ using RepositoryLayer.Servises;
 using RepositoryLayer.UserClass;
 using RepositoryLayer.UserInterface;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace FundooNotes
 {
@@ -37,6 +38,8 @@ namespace FundooNotes
             services.AddTransient<INoteRL, NoteRL>();
             services.AddTransient<ILableBL, LableBL>();
             services.AddTransient<ILableRL, LableRL>();
+            services.AddTransient<ICollaboratorBL, CollaboratorBL>();
+            services.AddTransient<ICollaborationRL, CollaboratorRL>();
             #region Swagger Configuration
             services.AddSwaggerGen(swagger =>
             {
@@ -73,8 +76,9 @@ namespace FundooNotes
                 });
             });
             #endregion
-            services.AddControllers().AddNewtonsoftJson(x =>
- x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            services.AddControllers().AddJsonOptions(x =>
+     x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
+
 
             services.AddDbContext<FundooContext>(opts => opts.UseSqlServer(Configuration["ConnectionStrings:FundooNotes"]));
 

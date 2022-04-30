@@ -78,3 +78,6 @@ D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Experimental.System.Messaging.dll
 D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\git\FundooNotes\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\git\FundooNotes\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\git\FundooNotes\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\git\FundooNotes\bin\Debug\netcoreapp3.1\System.Text.Json.dll
